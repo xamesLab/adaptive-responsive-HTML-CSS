@@ -1,0 +1,235 @@
+@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1170px;
+    margin: auto;
+}
+
+.header {
+    display: flex;
+    width: 100vw;
+    margin-bottom: 70px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.search {
+    height: 80px;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile_mini {
+    display: none;
+}
+
+.search__input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+    margin: 20px 40px;
+    padding-left: 14px;
+}
+
+input::-webkit-input-placeholder {
+    color:#BBC4D6
+    ;
+    font-family: FontAwesome, 'Roboto', sans-serif;
+}
+
+input::-moz-placeholder {
+    color:#BBC4D6
+    ;
+    font-family: FontAwesome;
+}
+
+input:-moz-placeholder {
+    color:#BBC4D6
+    ;
+    font-family: FontAwesome;
+}
+
+input:-ms-input-placeholder {
+    color:#BBC4D6
+    ;
+    font-family: FontAwesome;
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 1px solid #EBEBF1;
+}
+
+.profile__user {
+    margin-left: 19px;
+    margin-right: 10px;
+    font-size: 14px;
+    color: rgba(118, 130, 152, 1);
+}
+
+.profile__foto>img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.main__header {
+    width: 100%;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.main__header>h1{
+    color: rgba(18, 25, 32, 1);
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.main__content {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    width: calc(100%/4 - (((4 * 30px) - 30px )/4));
+    margin-bottom: 30px;
+    border: 1px solid #EBEBF1;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.card:not(:nth-child(4n)) {
+    margin-right: 30px;
+}
+
+.card:hover {
+    box-shadow: 0 0px 10px rgba(164, 164, 164, 0,03);
+    box-shadow: -3px 0px 40px rgba(0,0,0,0.1);
+}
+
+.card__img {
+    text-align: center;
+    width: 60px;
+    height: 60px;
+}
+
+.card__img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.search__logo>svg {
+    cursor: pointer;
+}
+
+.profile>div {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1210px){
+  section {
+      width: calc(100% - 40px);
+  }
+}
+
+@media screen and (max-width: 950px){
+    .card {
+        width: calc(100%/3 - (((3 * 20px) - 20px )/3));
+        margin-bottom: 20px;
+    }
+
+    .card:not(:nth-child(4n)) {
+        margin-right: 0px;
+    }
+
+    .card:not(:nth-child(3n)) {
+        margin-right: 20px;
+    }
+
+    .main__header>h1{
+        font-size: 28px;
+    }
+  }
+
+  @media screen and (max-width: 550px){
+      .search {
+          height: 105px;
+          flex-direction: column;
+      }
+
+      .search__input {
+          border: none;
+          padding-left: 0;
+          margin: 0;
+          height: 20px;
+      }
+
+      .search__logo {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 17px 0 16px 0;
+      }
+
+      .search__logo::after {
+          content: '';
+          height: 1px;
+          width: 100%;
+          background-color: rgba(187, 196, 214, 0.5);
+          position: absolute;
+          left: 0;
+          top: 73px;
+      }
+
+      .profile_mini {
+          margin-right: 5px;
+            display: block;
+    }
+
+        .profile {
+            display: none;
+        }
+
+    .main__content {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .card:not(:nth-child(3n)) {
+        margin-right: 0px;
+    }
+
+    .card {
+        width: 100%;
+        height: 140px;
+    }
+  }
